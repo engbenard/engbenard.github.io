@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function () {
+	
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "Uganda Electoral Results: 2021"
+	},
+	axisX: {
+		interval: 0
+	},
+	
+	data: [{
+		type: "bar",
+		toolTipContent: "<img src=\"https://canvasjs.com/wp-content/uploads/images/gallery/javascript-column-bar-charts/\"{url}\"\" style=\"width:40px; height:20px;\"> <b>{label}</b><br>{y}<br>",
+		dataPoints: [
+			{y: 337589, label: "Amuriat"},
+			{y: 45424, label: "Kabuleta"},
+			{y: 38772, label: "Kalema"},
+			{y: 37554, label: "Yahoo"},
+			{y: 3631437, label: "Kyagulanyi Ssentamu"},
+            {y: 57682, label: "Robert Mao"},
+			{y: 15014, label: "Mayambala Willy"},
+			{y: 67574, label: "Mugisha Muntu"},
+			{y: 25483, label: "Mwesigye Fred"},
+            {y: 51392, label: "Henry Tumukunde"},
+			{y: 6042898, label: "Yoweri Museveni"}
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

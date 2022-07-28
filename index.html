@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JS Libraries -->
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+
+	<!-- ICON -->
+	<script src="https://unpkg.com/phosphor-icons"></script>
+	<!-- MY CSS -->
+	<link rel="stylesheet" href="./style.css">
+
+	<title>Dashboard .html .css and .js</title>
+
+    <!--Material CDN-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" 
+    rel="stylesheet">
+
+    <!-- MY CSS -->
+	<link rel="stylesheet" href="./style.css">
+
+</head>
+
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <img src="./images/logo.png">
+                <h3>2021 Presidential<span class="danger"> Electoral Analysis</span></h3>
+            </div>
+            <div class="close" id="close-btn">
+                <span class="material-icons-sharp">close</span>
+            </div>
+            <div class="sidebar">
+
+                <li>
+                    <a href="#" class="active">
+                        <span class="material-icons-sharp">dashboard</span>
+                        <h3>Dashboard</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="geomap.html">
+                        <span class="material-icons-sharp">location_off</span>
+                        <h3>Geo-Map</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="piechart.html">
+                        <span class="material-icons-sharp">pie_chart</span>
+                        <h3>Pie Chart</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="pareto.html">
+                        <span class="material-icons-sharp">widgets</span>
+                        <h3>Pareto Chart</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="barchart.html">
+                        <span class="material-icons-sharp">scatter_plot</span>
+                        <h3>Bar Plot</h3>
+                    </a>
+                </li>
+                              
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Log Out</h3>
+                </a>
+            </div>
+        </aside>
+        <!----------------------- END OF ASIDE------------------------------->
+        <main>
+            <h1>Welcome</h1>
+
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <div class="insights">
+                <div class="total">
+                    <span class="material-icons-sharp">analytics</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Votes</h3>
+                            <h1>10,744,319</h1>
+                        </div>
+                        <div class="progress">
+                            <svg><circle cx='38' cy="38" r='36'></circle></svg>
+                            <div class="number">
+                                <p>59.35%</p>
+                            </div>
+                        </div>
+                    </div>   
+                    <small class="text-muted">Total Votes</small>
+                </div>
+                <!----------------------- END OF  TOTAL VOTES ---------------------------->
+                <div class="valid">
+                    <span class="material-icons-sharp">done_all</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Valid Votes</h3>
+                            <h1>10,350,819</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy="38" r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>96.33%</p>
+                            </div>
+                        </div>
+                    </div>   
+                    <small class="text-muted">Valid Votes</small>
+                </div>
+                <!----------------- END OF VALID VOTES-->
+                <div class="invalid">
+                    <span class="material-icons-sharp">thumb_down</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Invalid_Votes</h3>
+                            <h1>393,500</h1>
+                        </div>
+                        <div class="progress">
+                            <svg><circle cx='38' cy="38" r='36'></circle></svg>
+                            <div class="number">
+                                <p>3.66%</p>
+                            </div>
+                        </div>
+                    </div>   
+                    <small class="text-muted">Invalid Votes</small>
+                </div>
+                <!-------------------------------   END OF INVALID VOTES   --------------------------------------->
+            </div>
+            <!------------------------------------     END OF INSIGHTS  ------------------------------------------>
+         
+            
+            <div class="recent-orders">
+                <h2>TOP 5 WINNERS</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Other Names</th>
+                            <th>Party</th>
+                            <th>Total Votes</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>YOWERI</td>
+                            <td>KAGUTA MUSEVENI</td>
+                            <td>National Resistance Movement</td>
+                            <td class="warning">6,042,898</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>KYAGULANYI</td>
+                            <td>SSENTAMU ROBERT</td>
+                            <td>National Unity Platform</td>
+                            <td class="warning">3,631,437</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>AMURIAT</td>
+                            <td>OBOI PATRICK</td>
+                            <td>Independent</td>
+                            <td class="warning"> 337,589</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>MUGISHA</td>
+                            <td>MUNTU GREGG</td>
+                            <td>Alliance for National Transformation</td>
+                            <td class="warning"> 67,574</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                        <tr>
+                            <td>TUMUKUNDE</td>
+                            <td>HENRY KAKURUGU</td>
+                            <td>Independent</td>
+                            <td class="warning">51,392</td>
+                            <td class="primary">Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+            <!------------------- END TOP 5 WINNERS ----------------------->
+            
+            
+        </main>
+        <!-----------------------  END OF MAIN  ----------------------->
+
+        <div class="right">
+            <div class="top">
+
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p> Hey, <b>User</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="./images/profile-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!--------------  END OF TOP -------------------->
+
+            <div class="recent-updates">
+                <h2>Recent Updates</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./images/profile-2.jpg" alt="">
+                        </div>
+                        <div class="message">
+                            <p><b>Human Rights Commission</b> reported human rights violations in the  2021 elections. 
+                                54 people were killed at a rally in the eastern town of Luuka over the weekend of 18-19 November 2020 following the arrest of Bobi Wine.</p>
+                            <small class="text-muted">19th - 20th February, 2021</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------------------    END OF RECENT UPDATES    ----------------------------------->
+            <div class="sales-analytics">
+                <h2>Chat</h2>
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-icons-sharp">wifi_1_bar</span>
+                    </div>
+                    <div class="right">
+                        <div class="right">
+                            <div class="info">
+                                <h3>Users Online</h3>
+                                <small class="text-muted">Last 24 hours</small>
+                            </div>
+                            <h5 class="success">+39%</h5>
+                            <h3>3849</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="item offline">
+                    <div class="icon">
+                        <span class="material-icons-sharp">local_mall</span>
+                    </div>
+                    <div class="right">
+                        <div class="right">
+                            <div class="info">
+                                <h3>Users Offline</h3>
+                                <small class="text-muted">By Ascending Order</small>
+                            </div>
+                            <h5 class="success">-17%</h5>
+                            <h3>1100</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="item customer">
+                    <div class="icon">
+                        <span class="material-icons-sharp">person</span>
+                    </div>
+                    <div class="right">
+                        <div class="right">
+                            <div class="info">
+                                <h3>New Comments</h3>
+                                <small class="text-muted">Last 24 hours</small>
+                            </div>
+                            <h5 class="success">+25%</h5>
+                            <h3>849</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="item add-product">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                        <h3>Add Comment</h3>
+                    </div>
+                </div>
+            </div>
+            <!---------------------------------   END OF SALES ANALYTICS    ----------------------------------->
+        </div>
+    </div>
+
+</body>
+</html>
